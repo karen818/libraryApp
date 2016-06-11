@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Books</title>
+    <link rel="stylesheet" href="/stylesheets/materialize.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h5>Books<span>  Get Your Books On!</span></h5>
+
+    <table>
+        <thead>
+            <th>Book</th>
+            <th>Release Date</th>
+        </thead>
+        <tbody>
+            <% books.forEach(function(book){ %>
+                <tr>
+                    <td><%= book.title %></td>
+                    <td><%= book.date %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/javascripts/materialize.min.js"></script>
+  </body>
+</html>

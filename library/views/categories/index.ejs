@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Categories</title>
+    <link rel="stylesheet" href="/stylesheets/materialize.min.css">
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h5>Categories<span>  Get Your Books On!</span></h5>
+
+    <table>
+        <thead>
+            <th>Name</th>
+            <th>Age </th>
+        </thead>
+        <tbody>
+            <% authors.forEach(function(author){ %>
+                <tr>
+                    <td><%= author.name %></td>
+                    <td><%= author.age %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type="text/javascript" src="/javascripts/materialize.min.js"></script>
+  </body>
+</html>
