@@ -13,4 +13,19 @@ router.get('/new',function(req,res){
 
 })
 
+
+
 module.exports = router;
+
+
+//******************CREATE**********************//
+router.post('/authors', function(req, res) { //create
+    var author = req.body;
+    knex('authors').insert({
+        name: author.name,
+        age: author.age
+    }).then(function(result) {
+        res.redirect('/authors');
+    });
+
+});

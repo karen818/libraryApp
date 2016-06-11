@@ -6,22 +6,43 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
   <body>
-    <h5>Authors<span>  Get Your Books On!</span></h5>
+    <h4>Authors<span>  Get Your Books On!</span></h4>
 
     <table>
         <thead>
             <th>Name</th>
             <th>Age </th>
+            <th>Edit</th>
+            <th>Delete</th>
         </thead>
         <tbody>
             <% authors.forEach(function(author){ %>
                 <tr>
                     <td><%= author.name %></td>
                     <td><%= author.age %></td>
+                    <td><a href="/edit"class="waves-effect waves-light">Edit</a></td>
+                    <td><a href="delete"class="waves-effect waves-light">Delete</a></td>
                 </tr>
             <% }); %>
         </tbody>
     </table>
+    <form class="" action="/authors" method="post">
+    <fieldset>
+        <legend>Create a new author</legend>
+        <p>
+            <label for="name">Name </label>
+            <input type="text" name="name" value="">
+        </p>
+        <p>
+            <label for="age">Age </label>
+            <input type="text" name="age" value="">
+        </p>
+        <p>
+            <input type="submit" name="submit" value="Create New Author">
+        </p>
+    </fieldset>
+
+</form>
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="/javascripts/materialize.min.js"></script>
